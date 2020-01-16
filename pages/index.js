@@ -10,7 +10,11 @@ function Index ({posts}) {
       <h1>Hello page here !!!</h1>
       <ul>
         {posts.map(post => (
-          <li key={post.id}>{post.title}</li>
+          <li key={post.id}>
+            <Link href={`/post?id=${post.id}`} as={`/p/${post.id}`}>
+              <a>{post.title}</a>
+            </Link>
+          </li>
         ))}
       </ul>
     </div>
@@ -31,3 +35,5 @@ export default Index;
 
 // the fetched data need to return an object so it can become a prop for index
 // so posts will be a prop in index
+
+// "as" after href can alter the url showed on the client side, use it if the url looks very ugly

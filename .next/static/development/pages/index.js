@@ -10505,7 +10505,21 @@ function Index(_ref) {
         lineNumber: 13
       },
       __self: this
-    }, post.title);
+    }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
+      href: "/post?id=".concat(post.id),
+      as: "/p/".concat(post.id),
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 14
+      },
+      __self: this
+    }, __jsx("a", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 15
+      },
+      __self: this
+    }, post.title)));
   })));
 }
 
@@ -10542,6 +10556,7 @@ Index.getInitialProps = function _callee() {
 //the link will do client side rendering
 // the fetched data need to return an object so it can become a prop for index
 // so posts will be a prop in index
+// "as" after href can alter the url showed on the client side, use it if the url looks very ugly
 
 /***/ }),
 
